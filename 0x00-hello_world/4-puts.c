@@ -1,11 +1,9 @@
 #include <stdio.h>
 /**
- * main - A program that print a line using puts function
+ * main - A program that print a line using puts functin
  * Return: 0 (success)
  */
 int main(void)
-{
-char prog[] = ("\"Programming is like building a multilingual puzzle");
-puts(prog);
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
