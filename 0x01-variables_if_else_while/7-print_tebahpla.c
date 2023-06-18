@@ -4,8 +4,10 @@
  * Return: (0) (success)
  */
 int main(void)
-{int b = 'z';
-for ( b ; b >= 'a'; b--)
+{
+int b;
+
+for ( b = 'z'; b >= 'a'; b--)
 {
 putchar(b);
 }
