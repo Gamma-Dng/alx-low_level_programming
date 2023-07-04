@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_memcpy - copies n bytes from src to dest
+ *_strchr - locates a string
  *@c: character c
  *@s: character s
  *Return: (integer)
