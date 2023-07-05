@@ -3,23 +3,31 @@
 /**
  *is_prime_number - return if input integer is prime number
  *@n: value of n
- *Return: (integer)
+ *Return: (0) or (1)
  */
+int check_prime(int n, int d);
 int is_prime_number(int n)
 {
-int i;
-if (n <= 1)
-{
-return (0);
+return (check_prime(n, 2));
 }
-for (i = 2; i * i <= n; i++)
+/**
+ *check_prime - checks for prime numbers
+ *@n: int
+ *@d: int
+ *Return: int
+ */
+int check_prime(int n, int d)
 {
-if (n % i == 0)
+if (d >= n && n > 1)
 {
-return (0);
-}
-}
 return (1);
 }
-
-
+else if (n % d == 0 || n <= 1)
+{
+return (0);
+}
+else
+{
+return (check_prime(n, d + 1));
+}
+}
