@@ -26,7 +26,7 @@ return (1);
 else if (n % d == 0 || n <= 1)
 {
 return (0);
-i}
+}
 else
 {
 return (check_prime(n, d + 1));
