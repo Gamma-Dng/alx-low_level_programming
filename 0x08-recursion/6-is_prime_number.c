@@ -3,6 +3,7 @@
 /**
  *is_prime_number - return if input integer is prime number
  *@n: value of n
+ *@d: int
  *Return: (0) or (1)
  */
 int check_prime(int n, int d);
@@ -25,7 +26,7 @@ return (1);
 else if (n % d == 0 || n <= 1)
 {
 return (0);
-}
+i}
 else
 {
 return (check_prime(n, d + 1));
