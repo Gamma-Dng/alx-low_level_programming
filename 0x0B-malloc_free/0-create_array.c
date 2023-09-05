@@ -19,7 +19,3 @@ str[i] = c;
 return (str);
 }
 
-
-
-
-

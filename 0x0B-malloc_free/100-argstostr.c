@@ -1,38 +1,25 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
- * argstostr - main entry
- * @ac: int input
- * @av: double pointer array
+ * _strdup - duplicate to new memory space location
+ * @str: char
  * Return: 0
  */
-char *argstostr(int ac, char **av)
+char *_strdup(char *str)
 {
-int i, n, r = 0, l = 0;
-char *str;
-if (ac == 0 || av == NULL)
-return (NULL);
-for (i = 0; i < ac; i++)
-{
-for (n = 0; av[i][n]; n++)
-l++;
-}
-l += ac;
-str = malloc(sizeof(char) * l + 1);
+char *b;
+int i, r = 0;
 if (str == NULL)
 return (NULL);
-for (i = 0; i < ac; i++)
-{
-for (n = 0; av[i][n]; n++)
-{
-str[r] = av[i][n];
-r++;
-}
-if (str[r] == '\0')
-{
-str[r++] = '\n';
-}
-}
-return (str);
+i = 0;
+while (str[i] != '\0')
+i++;
+b = malloc(sizeof(char) * (i + 1));
+if (b == NULL)
+return (NULL);
+for (r = 0; str[r]; r++)
+b[r] = str[r];
+return (b);
 }
 
